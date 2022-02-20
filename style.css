@@ -248,3 +248,12 @@ article>label
     font-size: 1.65em;
     font-family: 'creato';
 }
+
+.imagem
+{
+    max-width: 600px;
+    display: block;
+    
+   
+   
+}

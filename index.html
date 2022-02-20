@@ -20,7 +20,7 @@
                 <p>
                     <h1 id="tubeconfig">Tube configuration:</h1>
                     <br>
-                    <img src="Imagens/tube_250.PNG" alt="Tubo">
+                    <img class="imagem" src="Imagens/tube_250.PNG" alt="Tubo">
                     <h1>1) Please inform the External diameter of your tube:</h1>
                     <input type="text" name="extwall" id="extwall">mm
 
@@ -55,7 +55,10 @@
             </div>
 
             <div id="reta">
-                <img src="Imagens/straightpart_600.PNG" alt="barra reta"></img>
+                <picture>
+                <source media="(max-width:600px)" srcset="Imagens/straightpartpq_250.PNG">
+                <img class="imagem" src="Imagens/straightpart_600.PNG" alt="barra reta"></img>
+               </picture>
                 <h1>3) In case of straight parts, your first curve is considered: lengh/2:</h1>
                 <h2 id="respreta1"></h2>
 
@@ -70,7 +73,11 @@
             </div>
 
             <div id="curva">
-                <img src="Imagens/tube_600.PNG" alt="barra curva"></img>
+                <picture>
+                <source media="(max-width:600px)" srcset="Imagens/part_350.PNG">
+                <img  class ="imagem" src="Imagens/part_600.PNG" alt="barra curva"></img>
+                </picture>
+
                 <h1>3) Please inform the distance of the first curve:</h1>
                 <input type="number" name="curve" id="curve">mm
 
