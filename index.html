@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+      
+<body>
+   
+    <header>
+        <h1>Buckling Load Calculation</h1>
+
+        
+    </header>
+
+            <div id="tube">
+                <p>
+                    <h1 id="tubeconfig">Tube configuration:</h1>
+                    <br>
+                    <img src="Imagens/tube_250.PNG" alt="Tubo">
+                    <h1>1) Please inform the External diameter of your tube:</h1>
+                    <input type="text" name="extwall" id="extwall">mm
+
+                    <h1>2) Please inform the Wall thickness of your tube:</h1>
+                    <input type="text" name="intwall" id="intwall">mm
+                
+                    <h1>3) Select the material of the tube (E355 or P460):</h1>
+                    <input type="radio" name="tubetype" id="e355" checked value="355">
+                    <label class="label" for="355">355</label>
+                    <input type="radio" name="tubetype" id="p460"  value="460">
+                    <label class="label" for="460">460</label>
+                    <br>
+            </div>
+
+
+            <div id="barraconfig">
+                <h1 id="partconfig">Part configuration:</h1>
+                <br>
+            
+                <h1>1) Please select the part type:</h1>
+                <input type="radio" name="infotube" id="straight" checked value="straight">
+                <label class="label" for="straight">Straight</label>
+                <input type="radio" name="infotube" id="curved" value="With curves">
+                <label class="label" for="curved">With curves</label>
+                        
+                <h1>2) Please inform the lenght:</h1>
+                <input type="number" name="lenght" id="lenght">mm
+                
+                <p><br><input type="button" value="Confirm" onclick= typepart()></p>
+           
+
+            </div>
+
+            <div id="reta">
+                <img src="Imagens/straightpart_600.PNG" alt="barra reta"></img>
+                <h1>3) In case of straight parts, your first curve is considered: lengh/2:</h1>
+                <h2 id="respreta1"></h2>
+
+                <h1>4) In case of straight parts, your most critical off-set is considered: 3</h1>
+                <h2 id="respreta2"></h2>
+
+                <h1 id="cust">Customer information:</h1>           
+                <h1>1) Please inform the customer buckling load specification:</h1>
+                <input type="number" name="specification" id="spec"> kN
+                <p><br><input type="button" value="Submit" onclick="checkpartStraight()"></p>
+
+            </div>
+
+            <div id="curva">
+                <img src="Imagens/tube_600.PNG" alt="barra curva"></img>
+                <h1>3) Please inform the distance of the first curve:</h1>
+                <input type="number" name="curve" id="curve">mm
+
+                <h1>4) Please inform the most critical off-set</h1>
+                <input type="number" name="offset" id="offset">mm
+
+                <h1 id="cust">Customer information:</h1>           
+                <h1>1) Please inform the customer buckling load specification:</h1>
+                <input type="number" name="specification" id="spec1"> kN
+                <p><br><input type="button" value="Submit" onclick="checkpartCurved()"></p>
+
+            </div>
+
+
+        </div>
+        </p>            
+
+        <div id="res">
+          
+        </div>
+
+   
+
+    <div>
+        <script src="tube.js">
+
+        </script>
+    </div>
+ 
+
+</body>
+
+<footer>
+    <p>Created by Luiz Gustavo - Developed only for study </p>
+</footer>
+
+</html>
